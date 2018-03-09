@@ -1,0 +1,2 @@
+# CashMe
+affilate
