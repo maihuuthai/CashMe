@@ -1,0 +1,34 @@
+﻿@using CashMe.Shared.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+<div class="col-md-4 col-md-offset-4" style="margin-top:35px;margin-bottom:35px">
+    <aside id="tg-sidebar" class="tg-sidebar">
+        <div class="tg-widget tg-widgetlogin">
+            <div class="tg-widgetcontent">
+                <div class="tg-widgettitle">
+                    <h3>Đăng nhập</h3>
+                </div>
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "tg-themeform tg-formsignin", role = "form" }))
+            {
+                    @Html.AntiForgeryToken()
+                    <h4>Nhập đầy đủ thông tin để đăng nhập.</h4>
+                    @*<hr />*@
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group tg-formgroup">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group tg-formgroup">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <button class="tg-btn tg-btn-lg" type="submit">Đăng Nhập</button>
+                }
+            </div>
+            <a href="@Url.Action("Register","Account")" class="tg-btnforgotpassword">Chưa có tài khoản? Đăng ký ngay</a>
+            <a href="@Url.Action("ForgotPassword","Account")" class="tg-btnforgotpassword">Quên mật khẩu?</a>
+        </div>
+    </aside>
+</div>

@@ -1,0 +1,662 @@
+@media (max-width:1500px){
+	.tg-homebanner{height:850px;}
+	.tg-bannerbg{height:100%;}
+	.tg-bannerbg img{
+		width:auto !important;
+		height:100% !important;
+		max-width:none;
+	}
+}
+@media (max-width:1360px){
+	.tg-homebanner{height:850px;}
+	.tg-bannerbg,
+	.tg-homebanner .tg-bannerbg img{height:100%;}
+	.tg-directposts.tg-directpostsv2,
+	.tg-mapbox{width:50%;}
+}
+@media (max-width:1199px){
+	/*.tg-sectionimg {margin: -96px 0 -80px;}*/
+	.tg-formfeedbacksearch .form-control{width: 252px;}
+	.tg-centericons .tg-howitworksbox .tg-servicseakerimg:before{left: 10px;}
+	.tg-centericons .tg-howitworksbox .tg-servicseakerimg:after{right: 15px;}
+	.tg-alertmessage span{width:85%;}
+	.tg-followers span + span{font-size:15px;}
+	.tg-totalviews span + span{font-size:13px;}
+	.tg-alertmessage .close{line-height:56px;}
+	.tg-btnaction{padding:20px 18px;}
+	.tg-dateandtimeslots.tg-tuesday .tg-datebox{min-height:0;}
+	.tg-datebox{
+		width:100%;
+		margin:0 0 15px;
+	}
+	body.tg-home .tg-directpost{width:100%;}
+	.tg-timeslots{width:100%;}
+	.tg-subcategorycheckbox label{font-size:12px;}
+	.tg-appoinmentbox .tg-timeslots .tg-radio{width:33.33%;}
+	.tg-invoicesheading h3 {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.tg-invoicestitle .tg-titleamount,
+	.tg-amout{width:20%;}
+	.tg-invoices li .tg-btnaction,
+	.tg-invoicestitle .tg-titleaction{width:30%;}
+	.tg-companylist ul li figure{margin:0 0 10px;}
+	.tg-companylist .tg-companydata{float:left;}
+	.tg-availablelocation .tg-servicelocation .tg-directpost{width:100%;}
+	.tg-availablelocation .tg-servicesinfo{
+		width:100%;
+		float:left;
+		padding:15px 0 0;
+	}
+	.tg-availablelocation .tg-servicesinfo li{
+		width:auto;
+		float:none;
+		display:inline-block;
+	}
+	.tg-searchprofilesttings .tg-checkbox.tg-subcategorycheckbox{
+		width:25%;
+		padding:9px;
+	}
+	.tg-regleftarea {padding: 0 0 0 70px;}
+	.tg-threecolumns.tg-liststyledot li{width:50%;}
+	.tg-emailmessagebox .tg-formreply .tg-uploadedimggallery li{width:25%;}
+	.tg-emailmessagebox .tg-btnarea .tg-btn:first-child{padding:0 50px;}
+	.tg-emailmessagebox .tg-btnarea .tg-btn:last-child{padding:0 30px;}
+	.tg-availablelocation .tg-servicesinfo li + li{padding:0 0 0 10px;}
+	.tg-btnjoblocationeditdelete{
+		margin:0;
+		top:0;
+	}
+	.tg-pkgexpireyandcounter .tg-pkgexpirey{padding:20px;}
+	.tg-countdown span.countDiv {width: 11px;}
+	.tg-pkgplan{padding:0 0 20px;}
+	.tg-pkgplan .tg-description,
+	.tg-pkgplanhead{padding:20px 25px;}
+	.tg-pkgplan .tg-btn {padding: 0 30px;}
+	.tg-patientfeedback .tg-patientfeedback .tg-patientfeedbackcontent,
+	.tg-patientfeedbackcontent{
+		width:auto;
+		float:none;
+		overflow:hidden;
+	}
+	.tg-formleavefeedback .form-group .tg-select{width:65%;}
+	.tg-fcol .tg-contactinfo li address{
+		width:90%;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	.tg-servicesrating li{width:50%;}
+	.tg-servicelocation .tg-directpost {width: 75%;}
+	.tg-servicesinfo {width: 25%;}
+}
+@media (max-width:991px){
+	.tg-navigation > ul > li{padding:0 11px;}
+	.tg-login .tg-admin {padding: 5px 0 0 5px;}
+	.tg-formsearch{padding:30px;}
+	.tg-checkbox.tg-subcategorycheckbox{width:25%;}
+	.tg-counter h2{
+		font-size: 30px;
+		line-height: 33px;
+	}
+	.tg-homebanner .tg-bannerbg img{
+		width:auto;
+		max-width:none;
+		height:100%;
+	}
+	.tg-sectionimg {margin: -108px 0 -80px;}
+	.tg-dashboardappoinmentsetting .tg-dashboardtabnav li{width:30%;}
+	.tg-sunday .tg-timeslots{padding:0;}
+	.tg-directpost{width:100%;}
+	.tg-newstrusted .tg-latestnews{margin:0 0 30px;}
+	.tg-welcometomedlink .tg-textwidget{margin:0 0 30px;}
+	.tg-brands figure{width:50%;}
+	.tg-posttitle h3{font-size:15px;}
+	.tg-themescrollbar .tg-directpost .tg-directpostimg{margin:0 0 20px;}
+	.tg-filtersection{width: 320px;}
+	.tg-themescrollbar .tg-directpost .tg-directinfo{
+		width:100%;
+		float:left;
+	}
+	.tg-rightbox,
+	.tg-postshare{
+		float:left;
+		margin:15px 0 0;
+	}
+	.tg-alertmessage span{width:80%;}
+	.tg-monthlyviewstabnavtotlalviews{
+		width:100%;
+		margin:0 0 30px;
+	}
+	.tg-navdetailpagetabs li{
+		width:100%;
+		display:block;
+	}
+	.tg-emailnavscroll{height:250px;}
+	.tg-freeregistration{padding:0 15px;}
+	.tg-messagespagecount{
+		float:left;
+		margin:15px 0 0;
+	}
+	.tg-regrightarea{
+		width:100%;
+		float:left;
+		padding:15px 0 0;
+		text-align:center;
+	}
+	.tg-regleftarea {
+		padding: 0;
+		text-align:center;
+	}
+	.tg-messagecontent{
+		width:100%;
+		float:left;
+		padding:30px 0 0;
+	}
+	.tg-emailnavbox{width:100%;}
+	.tg-monthlyviewstabcontent{width:100%;}
+	.tg-widgetprofile .tg-metadata li{
+		width:100%;
+		padding:0;
+		text-align:left;
+	}
+	.tg-favotirelistcontent{width:80%;}
+	.tg-btnaction {padding: 20px 7px;}
+	.tg-btndelete{margin:0;}
+	.tg-listdata{width:70%;}
+	.tg-listdata span{
+		text-overflow:ellipsis;
+		overflow:hidden;
+		white-space:nowrap;
+	}
+	.tg-directpostimg{margin:0 10px 0 0;}
+	.tg-directinfo{width:100%;}
+	.tg-contentdetailpage .tg-directinfo{width:auto;}
+	.tg-servicelocation .tg-directpost{width:100%;}
+	.tg-directposthead .tg-metadata li:first-child{padding-left:0;}
+	.tg-companylistdropdown{margin:0 0 15px;}
+	.tg-btnjoblocationeditdelete{top:50%;}
+	.tg-directposthead .tg-metadata li{padding:0 7px;}
+	.tg-widgetprofile .tg-metadata li:before{display:none;}
+	.tg-widgetprofile .tg-metadata li + li{padding:8px 0 0;}
+	.tg-widgetarchives ul li{width:100%;}
+	.tg-widgetarchives ul li a span{float:right;}
+	.tg-formrefinesearch fieldset .tg-radio{width:100%;}
+	.tg-formrefinesearch fieldset .tg-radio + .tg-radio{margin:2px 0 0;}
+	.tg-formrefinesearch fieldset .tg-btn{padding:0 20px;}
+	.tg-centericons .tg-howitworksbox{background:none;}
+	.tg-centericons .tg-howitworksbox .tg-servicseakerimg:after,
+	.tg-centericons .tg-howitworksbox .tg-servicseakerimg:before{display:none;}
+	.tg-searchprofilesttings .tg-checkbox.tg-subcategorycheckbox {
+		width: 33.33%;
+		padding: 8px;
+	}
+	.tg-servicesinfo{
+		width:100%;
+		float:left;
+		padding:15px 0 0;
+	}
+	.tg-servicesinfo li{
+		width:auto;
+		float:none;
+		display:inline-block;
+	}
+	.tg-servicesinfo li + li{padding:0 0 0 10px;}
+	.tg-profilephoto .form-control{margin:0 0 15px;}
+	.tg-uploadedimggallery li{width:20%;}
+	.tg-updateall {text-align:center;}
+	.tg-updateall span{
+		width:100%;
+		text-align:center;
+	}
+	.tg-updateall .tg-btn{float:none;}
+	.tg-threecolumns.tg-liststyledot li{padding:0 13px;}
+	.tg-fcol{padding:0 30px;}
+	.tg-changepassword .tg-btn{width:100%;}
+	.tg-expireytimecounter{border-radius:5px 5px 0 0;}
+	.tg-pkgexpireyandcounter .tg-pkgexpirey{border-radius:0 0 5px 5px;}
+	.tg-pkgexpireyandcounter .tg-pkgexpirey,
+	.tg-expireytimecounter,
+	.tg-navpackageplans li{width:100%;}
+	.tg-pkgfoot .tg-checkbox{
+		width:100%;
+		float:left;
+	}
+	.tg-detailpage .tg-directinfo{width:100%;}
+	.tg-detailpage .tg-directpostimg{
+		width: 205px;
+		float: none;
+		overflow: hidden;
+		margin:0 auto 30px;
+	}
+	.tg-detailpage .tg-badges li{padding:6.6px;}
+	.tg-patientfeedbackhead .tg-formfeedbacksearch{width:100%;}
+	.tg-patientfeedbackhead .tg-metadata{
+		width:100%;
+		text-align:center;
+	}
+	.tg-patientfeedback .tg-patientfeedback{padding:0 0 0 30px;}
+	.tg-formleavefeedback .form-group .tg-select,
+	.tg-formleavefeedback .form-group label{width:100%;}
+	.tg-recommendedradio{
+		width:100%;
+		float:left;
+	}
+	.tg-directinfo{width:auto;}
+	.fc-content-skeleton table thead tr td{line-height:98px;}
+	.fc-today.fc-state-highlight .fc-day-number{
+		width:40px;
+		height:40px;
+		line-height:40px;
+	}
+	.tg-recommendedradio .tg-radio:first-child{padding-left:0;}
+	.tg-servicesrating li em{
+		display:block;
+		clear:both;
+		margin:5px 0 0;
+	}
+	.tg-modaldialog{
+		width:100%;
+		padding:0 15px;
+	}
+	.tg-fcol .tg-contactinfo li address {width: 85%;}
+}
+@media (max-width:767px){
+	.tg-login .tg-nav{padding:0;}
+	.tg-login .tg-admin{
+		margin: 0 0 0 12px;
+		padding: 2px 0 0 20px;
+		position:relative;
+	}
+	.tg-nav{padding:4px 0 0;}
+	.tg-dropdowarrow{display:block;}
+	.tg-navigation {
+		top: 100px;
+		right: 0;
+		margin: 0;
+		border: 0;
+		padding: 0;
+		z-index: 99;
+		background: #fff;
+		text-align:left;
+		position: absolute;
+	}
+	.tg-navigation > ul > li {width: 100%;}
+	.tg-navigation > ul > li + li:before,
+	.tg-navigation > ul > li.tg-hasdropdown > a:before{display:none;}
+	.tg-dropdownmenu {
+		opacity: 1;
+		clear:both;
+		width:auto;
+		margin:0 -15px;
+		display: none;
+		overflow: hidden;
+		position: static;
+		visibility: visible;
+		box-shadow:none;
+		border-top:1px solid #ddd;
+	}
+	.tg-admin:before {
+		top: 0;
+		left: 0;
+		color: #999;
+		content: '/';
+		font-size: 12px;
+		line-height: 30px;
+		position: absolute;
+	}
+	.tg-navigation > ul > li {
+		border-bottom:1px solid #ddd;
+		padding:0 15px;
+	}
+	.tg-dropdownmenu li{padding:0 15px;}
+	.tg-open .tg-dropdowarrow i.fa-plus:before{content:'\f068';}
+	.tg-navigation ul li a,
+	.tg-navigation > ul > li.tg-hasdropdown > a{
+		padding:0;
+		line-height: 30px;
+		display: block;
+	}
+	.tg-admin{margin: 0 0 0 10px;}
+	.tg-contactinfo li{padding: 0 10px;}
+	.tg-homebanner {height: 900px;}
+	.tg-bannercontent{
+		top:50%;
+		margin:-360px 0 0;
+		display:block;
+	}
+	.tg-features{
+		width:auto;
+		margin:-15px 0;
+		clear:both;
+		overflow:hidden;
+	}
+	.tg-features .tg-feature{padding:15px 0;}
+	.tg-timelineblog{padding:15px 0;}
+	.tg-pagination{margin:0 0 30px;}
+	.tg-formrefinesearch fieldset .tg-btn{margin:0 0 30px;}
+	.tg-directposts.tg-directpostsv2,
+	.tg-mapbox{width:100%;}
+	.tg-directposts.tg-directpostsv2{padding:0 15px;}
+	.tg-widget.tg-widgetlogin{margin:0 0 30px;}
+	.tg-howitworksholder{margin:0;}
+	.tg-howitsworktitle{margin:0 0 50px;}
+	.tg-widgetprofile{text-align:center;}
+	.tg-widgetprofile .tg-metadata li{
+		width:auto;
+		padding:0 15px;
+	}
+	.tg-widgetprofile .tg-metadata li + li{padding:0 15px;}
+	.tg-widgetprofile .tg-metadata li:first-child{padding-left:0;}
+	.tg-widgetprofile .tg-metadata li:before{display:block;}
+	.tg-listdata{width:auto;}
+	.tg-favotirelistcontent{width:auto;}
+	.tg-btnaction{padding:20px 29px;}
+	.tg-alertmessage span{
+		width:100%;
+		padding:10px;
+	}
+	.tg-widgetprofile .tg-directpostimg{
+		width:auto;
+		float:none;
+		display:inline-block;
+	}
+	.tg-infobox .tg-fcol:first-child{
+		width:100%;
+		padding:0 0 30px;
+	}
+	.tg-profilephoto .tg-btn{margin:10px 0 0;}
+	.tg-rightbox{float:right;}
+	.tg-posttags{width:100%;}
+	.tg-formleavecomment{margin:0 0 30px;}
+	.tg-fcol{min-height:150px;}
+	.tg-infobox .tg-fcol{width:50%;}
+	.tg-quicklinks .tg-fcol{width:100%;}
+	.tg-navpackageplans li{width:33.33%;}
+	.tg-formleavefeedback{margin:0 0 30px;}
+	.tg-galleryslider {margin:0 0 40px;}
+	.tg-askquestion .tg-btnbox .tg-btn{margin:0 0 30px;}
+	.tg-formsubscribe fieldset .form-group:last-child,
+	.tg-formsubscribe fieldset .form-group{width:100%;}
+	.tg-formsubscribe fieldset .form-group + .form-group{margin:15px 0 0;}
+}
+@media (max-width:700px){
+	.tg-homebanner {height: 1000px;}
+	.tg-bannercontent {margin: -410px 0 0;}
+	.tg-checkbox.tg-subcategorycheckbox {width: 33.33%;}
+	.tg-addjobdetailinfo .tg-modaldialog,
+	.tg-addcompany .tg-modaldialog{
+		width: 100%;
+		padding: 0 15px;
+	}
+	.tg-btndelete {margin: 0 0 0 20px;}
+	.tg-filterbalenav li a{padding:0 10px 10px;}
+	.tg-sectiontitle h1,
+	.tg-sectiontitle h2 {
+		font-size: 30px;
+		line-height: 33px;
+	}
+}
+@media (max-width:639px){
+	.tg-leftbox{width:100%;}
+	.tg-rightbox{float:left;}
+	.tg-commingsooncontent{width:100%;}
+}
+@media (max-width:567px){
+	.tg-quickadvice{
+		width:100%;
+		text-align:center;
+	}
+	.tg-contactinfo li{
+		float:none;
+		display:inline-block;
+	}
+	.tg-formsearch fieldset .tg-select{width:50%;}
+	.tg-formsearch fieldset .form-control{width:100%;}
+	.tg-sectiontitle h2{
+		font-size:25px;
+		line-height:30px;
+	}
+	.tg-svginject{width:70px;}
+	.tg-innerbanner .tg-formsearch fieldset .tg-select {width: 50%;}
+	.tg-formsearch fieldset .tg-select:nth-child(2),
+	.tg-formsearch fieldset .tg-select:nth-child(4){border:0;}
+	.tg-innerbanner .tg-formsearch fieldset .form-control{
+		width:95%;
+		float:left;
+	}
+	.tg-formsearch fieldset .tg-btnformsearch{
+		z-index:9;
+		top:auto;
+		bottom:8px;
+		right:8px;
+		width:30px;
+		height:30px;
+	}
+	.tg-filterbalenav li{
+		width:100%;
+		margin:0 0 1px;
+		background:#f8f8f8;
+	}
+	.tg-filterbalenav li a{
+		padding:0;
+		line-height:30px;
+		display:block;
+	}
+	.tg-favoritlisttitle span{width: 60%;}
+	.tg-favoritlisttitle .tg-titleaction{width: 40%;}
+	.tg-child{padding:0 0 0 30px;}
+	.tg-howitworks > [class^="col-"],
+	.tg-howitworks > [class*="col-"]{width:100%;}
+	.tg-dashboardappoinmentsetting .tg-dashboardtabnav li{width:50%;}
+	.tg-footernav{
+		width:100%;
+		margin:0 0 10px;
+	}
+	.tg-bannercontent {margin: -430px 0 0;}
+	.tg-subcategorycheckbox label {font-size: 11px;}
+	.tg-invoices .tg-btnaction .tg-btndelete{margin:0;}
+	.tg-footernav ul{text-align:center;}
+	.tg-footernav ul li{
+		float:none;
+		display:inline-block;
+	}
+	.tg-uiicons ul li em{
+		word-break:break-all;
+		line-height:17px;
+	}
+	.tg-appointmentdetailbox,
+	.tg-favoritlistingbox{width:650px;}
+	.tg-navpackageplans li{width:100%;}
+	.tg-copyright{
+		width:100%;
+		text-align:center;
+	}
+	.tg-appointmentlightbox .tg-timeslots .tg-radio{width:33.33%;}
+	.tg-formbookappointment .tg-timeslothead h3{
+		width:100%;
+		margin:0 0 8px;
+	}
+	.tg-formbookappointment .tg-timeslothead .tg-checkbox{float:left;}
+	.tg-appointmentapprove .tg-rightbox{float:left;}
+	body.tg-home .tg-directpost .tg-directpostimg{
+		width:100%;
+		margin:0 0 20px;
+	}
+	.tg-directinfo{
+		width:100%;
+		float:left;
+	}
+}
+@media (max-width:480px){
+	.tg-logo {
+		width:200px;
+		float: none;
+		margin: 16px auto 16px;
+		display:block;
+	}
+	.tg-navigationarea{
+		width:100%;
+		float:left;
+		padding:10px 0 30px 0;
+		text-align:center;
+	}
+	.tg-navigation{top:143px;}
+	.tg-nav {float:left;}
+	.tg-admin{
+		margin: 0;
+		padding: 0;
+		float: right;
+	}
+	.tg-admin:before{display: none;}
+	.tg-usermenu.tg-btndropdown{
+		margin: 0;
+		padding: 7px 0;
+	}
+	.tg-checkbox.tg-subcategorycheckbox{width:50%;}
+	.tg-homebanner {height: 1080px;}
+	.tg-bannercontent {margin: -485px 0 0;}
+	.tg-filtersection{right:-30px;}
+	.tg-sectiontitle h2 {
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.tg-uploadedimggallery li{width:33.33%;}
+	.tg-searchprofilesttings .tg-checkbox.tg-subcategorycheckbox{width:50%;}
+	.tg-directpost .tg-directinfo .tg-description p{margin:0;}
+	.tg-counter{
+		width:100%;
+		padding:15px 0;
+	}
+	.tg-modalcontent h2{font-size:20px;}
+	.tg-contactinfo{
+		width: 100%;
+		text-align: center;
+	}
+	.tg-detailpage > .tg-directinfo > .tg-directposthead{padding: 0;}
+	.tg-directposthead .tg-btn{
+		float: left;
+		margin: 0 0 15px;
+		position: static;
+	}
+}
+@media (max-width:479px){
+	.tg-directpostimg{margin:0 0 20px;}
+	.tg-directpost .tg-directinfo{
+		width:100%;
+		float:left;
+		overflow:visible;
+	}
+	.tg-directinfo .tg-rightarea {
+		width:100%;
+		float:left;
+		position:relative;
+	}
+	.tg-bookappoinment a span{
+		display: inline-block;
+		vertical-align: top;
+		line-height: 16px;
+		padding: 0 0 3px 3px
+	}
+	.tg-bookappoinment .tg-btn{width: 100%;}
+	.tg-directinfo .tg-rightarea .tg-bookappoinment{width: 100%;}
+	.tg-directinfo .tg-rightarea .tg-bookappoinment > a{margin:0 0 10px;}
+	.tg-directinfo .tg-rightarea .tg-bookappoinment .tg-metadata{padding:10px 0 0;}
+	.tg-infobox .tg-fcol,
+	.tg-brands figure{width:100%;}
+	.tg-authordp{margin:0 0 15px;}
+	.tg-appoinmentbox .tg-timeslots .tg-radio{width:50%;}
+	.tg-authorcontent{
+		width:100%;
+		float:left;
+		padding:0;
+	}
+	.tg-invoicesheading,
+	.tg-invoicestitle span{
+		width:40%;
+		padding:16px 10px;
+	}
+	.tg-invoicestitle .tg-titleaction{width:40%;}
+	.tg-amout{padding:17px 10px;}
+	.tg-countdown{
+		height:20px;
+		font-size:25px;
+		line-height:20px;
+	}
+	.tg-sectiontitle h1,
+	.tg-sectiontitle h2 {
+		font-size: 20px;
+		line-height: 23px;
+	}
+	.tg-formsearch fieldset .tg-select{width:100%;}
+	.tg-collapsecontent ul li{padding:0;}
+	.tg-patientfeedbackcontent{
+		width:100%;
+		float:left;
+	}
+	.fc-content-skeleton table thead tr td {line-height: 88px;}
+	.fc-today.fc-state-highlight .fc-day-number{
+		width:30px;
+		height:30px;
+		line-height:30px;
+	}
+	.tg-directposthead .tg-metadata li{}
+	.tg-threecolumns.tg-liststyledot li,
+	.tg-servicesinfo li{width:100%;}
+	/* .tg-directposthead .tg-metadata li{padding:0;}
+	.tg-directposthead .tg-metadata li:before{display:none;} */
+	.tg-servicesinfo li + li{padding:10px 0 0;}
+	.tg-midlinktimelinetabcontent > div [class^="col-"],
+	.tg-midlinktimelinetabcontent > div [class*="col-"]{width:100%;}
+	.tg-medlinktimelinenav li{
+		width:15%;
+		float:left;
+	}
+	.tg-listdatastyle li span{margin:0 0 5px;}
+	.tg-listdatastyle li span:last-child{
+		position:static;
+		text-align:left;
+	}
+	.tg-formbookappointment .tg-btnbox .tg-btn{padding:0 25px;}
+}
+@media (max-width:439px){
+	.tg-bannercontent {margin: -500px 0 0;}
+	.tg-contactinfo li + li:before{display:none;}
+	.tg-appoinmentbox .tg-timeslots .tg-radio{width:100%;}
+	.tg-dashboardtabnav li {
+		width: 50%;
+		float: left;
+		display: block;
+	}
+	.tg-listdatastyle li span:first-child{
+		width:100%;
+		font-size:14px;
+		line-height:16px;
+	}
+	.tg-formfeedbacksearch .form-control {width: 164px;}
+	.tg-metadata li{padding:0 8px;}
+	.tg-box{padding:30px 0;}
+	.tg-questionanswer .tg-questionanswer{padding:0;}
+	.tg-questionanswer .tg-questionanswer .tg-patientfeedbackcontent{width:100%;}
+	.tg-askquestion .tg-btnbox .tg-btn{width:100%;}
+	.tg-questionanswer figure{margin:0 0 20px;}
+	.tg-patientfeedbackhead .tg-metadata li{
+		width:100%;
+		padding:0;
+		text-align:left;
+	}
+	.tg-patientfeedback figure{margin:0 0 20px;}
+	.tg-patientfeedbackhead .tg-metadata li:before{display:none;}
+	.tg-patientfeedback .tg-patientfeedback .tg-patientfeedbackcontent{float:left;}
+	.tg-patientfeedback .tg-patientfeedback{padding:0;}
+	.tg-availablelocation  .tg-servicesinfo li{
+		width:100%;
+		padding:5px 0;
+	}
+	.tg-availablelocation  .tg-servicesinfo li + li{padding:5px 0;}
+}
+@media (max-width:320px){
+	
+}

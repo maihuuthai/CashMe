@@ -1,0 +1,195 @@
+*:after,
+*:before,
+p a,
+a,
+.tg-dropdownmenu,
+.tg-select select,
+.tg-btn,
+.tg-btndropdown,
+.tg-dropdownbox,
+.tg-featureicon img,
+.tg-job,
+.tg-usericon,
+.tg-priceperhour,
+.owl-theme .owl-controls .owl-page span,
+.tg-btnroundprev,
+.tg-btnroundnext,
+.tg-reviewerdp figure,
+.tg-brands figure a img,
+.tg-quicklinks .tg-fcol ul li,
+.tg-subcategorycheckbox label,
+.tg-subcategorycheckbox label span,
+.tg-widgetbrochures ul li a,
+.tg-servicesinfo li span i,
+.tg-themelist li,
+.tg-threecolumns li,
+.tg-badges li a,
+.tg-collapsecontent ul li span,
+.tg-patientfeedback figure img,
+.tg-patientfeedback figure a img,
+.tg-patientfeedback figure figcaption,
+.tg-questionanswer figure img,
+.tg-questionanswer figure a img,
+.tg-questionanswer figure figcaption,
+.tg-overallraging,
+.tg-recommendedradio .tg-radio label,
+.tg-map-controls span,
+.tg-galleryslider .item figure img,
+.tg-medlinktimelinenav li a,
+.tg-timelineblog figure img,
+.tg-timelineblog figure figcaption,
+.tg-alertmessage,
+.tg-alertmessage .close,
+.tg-posttype li figure img,
+.tg-posttype li figure figcaption,
+.tg-galleryimg figure img,
+.tg-galleryimg figure figcaption,
+.tg-uiicons ul li i.fa-pencil,
+.tg-uiicons ul li i.fa-close,
+.tg-mainservice i.fa,
+.tg-btnjoblocationeditdelete button,
+.tg-btnview,
+.tg-btndelete,
+.tg-navpackageplans li.active a:after,
+.tg-iosstylcheckbox label,
+.tg-appoinmentbox .tg-timeslots .tg-radio input[type=radio] + label,
+.tg-appoinmentbox .tg-timeslots .tg-radio input[type=radio]:checked + label,
+.tg-post .tg-postdate,
+.tg-post .tg-postdate span,
+.tg-listdatastyle li span:first-child,
+.fc-prev-button,
+.fc-next-button,
+.fc-future .fc-day-number,
+.tg-btnprevpost a figure figcaption,
+.tg-btnnextpost a figure figcaption{
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.owl-origin {
+	-webkit-perspective: 1200px;
+	-webkit-perspective-origin-x : 50%;
+	-webkit-perspective-origin-y : 50%;
+	-moz-perspective : 1200px;
+	-moz-perspective-origin-x : 50%;
+	-moz-perspective-origin-y : 50%;
+	perspective : 1200px;
+}
+/* fade */
+.owl-fade-out {
+	z-index: 10;
+	-webkit-animation: fadeOut .7s both ease;
+	-moz-animation: fadeOut .7s both ease;
+	animation: fadeOut .7s both ease;
+}
+.owl-fade-in {
+	-webkit-animation: fadeIn .7s both ease;
+	-moz-animation: fadeIn .7s both ease;
+	animation: fadeIn .7s both ease;
+}
+/* backSlide */
+.owl-backSlide-out {
+	-webkit-animation: backSlideOut 1s both ease;
+	-moz-animation: backSlideOut 1s both ease;
+	animation: backSlideOut 1s both ease;
+}
+.owl-backSlide-in {
+	-webkit-animation: backSlideIn 1s both ease;
+	-moz-animation: backSlideIn 1s both ease;
+	animation: backSlideIn 1s both ease;
+}
+/* goDown */
+.owl-goDown-out {
+	-webkit-animation: scaleToFade .7s ease both;
+	-moz-animation: scaleToFade .7s ease both;
+	animation: scaleToFade .7s ease both;
+}
+.owl-goDown-in {
+	-webkit-animation: goDown .6s ease both;
+	-moz-animation: goDown .6s ease both;
+	animation: goDown .6s ease both;
+}
+/* scaleUp */
+.owl-fadeUp-in {
+	-webkit-animation: scaleUpFrom .5s ease both;
+	-moz-animation: scaleUpFrom .5s ease both;
+	animation: scaleUpFrom .5s ease both;
+}
+.owl-fadeUp-out {
+	-webkit-animation: scaleUpTo .5s ease both;
+	-moz-animation: scaleUpTo .5s ease both;
+	animation: scaleUpTo .5s ease both;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {0% {opacity: 1}}
+@-moz-keyframes empty {0% {opacity: 1}}
+@keyframes empty {0% {opacity: 1}}
+@-webkit-keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:1; }
+}
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes fadeOut {
+	0% { opacity:1; }
+	100% { opacity:0; }
+}
+@-moz-keyframes fadeOut {
+	0% { opacity:1; }
+	100% { opacity:0; }
+}
+@keyframes fadeOut {
+	0% { opacity:1; }
+	100% { opacity:0; }
+}
+@-webkit-keyframes backSlideOut {
+	25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+	100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+}
+@-moz-keyframes backSlideOut {
+	25% { opacity: .5; -moz-transform: translateZ(-500px); }
+	75% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+	100% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+}
+@keyframes backSlideOut {
+	25% { opacity: .5; transform: translateZ(-500px); }
+	75% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+	100% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+}
+@-webkit-keyframes backSlideIn {
+	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); }
+}
+@-moz-keyframes backSlideIn {
+	0%, 25% { opacity: .5; -moz-transform: translateZ(-500px) translateX(200%); }
+	75% { opacity: .5; -moz-transform: translateZ(-500px); }
+	100% { opacity: 1; -moz-transform: translateZ(0) translateX(0); }
+}
+@keyframes backSlideIn {
+	0%, 25% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
+	75% { opacity: .5; transform: translateZ(-500px); }
+	100% { opacity: 1; transform: translateZ(0) translateX(0); }
+}
+@-webkit-keyframes scaleToFade {to { opacity: 0; -webkit-transform: scale(.8); }}
+@-moz-keyframes scaleToFade {to { opacity: 0; -moz-transform: scale(.8); }}
+@keyframes scaleToFade {to { opacity: 0; transform: scale(.8); }}
+@-webkit-keyframes goDown {from { -webkit-transform: translateY(-100%); }}
+@-moz-keyframes goDown {from { -moz-transform: translateY(-100%); }}
+@keyframes goDown {from { transform: translateY(-100%); }}
+@-webkit-keyframes scaleUpFrom {from { opacity: 0; -webkit-transform: scale(1.5); }}
+@-moz-keyframes scaleUpFrom {from { opacity: 0; -moz-transform: scale(1.5); }}
+@keyframes scaleUpFrom {from { opacity: 0; transform: scale(1.5); }}
+@-webkit-keyframes scaleUpTo {to { opacity: 0; -webkit-transform: scale(1.5); }}
+@-moz-keyframes scaleUpTo {to { opacity: 0; -moz-transform: scale(1.5); }}
+@keyframes scaleUpTo {to { opacity: 0; transform: scale(1.5); }}

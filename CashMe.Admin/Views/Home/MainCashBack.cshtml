@@ -1,0 +1,54 @@
+﻿@model CashMe.Shared.Models.RegisterViewModel
+@{
+    ViewBag.Title = "MainCashBack";
+}
+<div class="tg-pageinnerbanner tg-haslayout tg-parallaximg" data-appear-top-offset="600" data-parallax="scroll" data-image-src="~/Content/assets/~/Content/assets/images/banner/img-02.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="tg-pageheadcontent">
+                    <div class="tg-pagetitle">
+                        <h1>CASHBACK</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-top:35px;">
+
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 pull-left">
+        <div class="tg-widgetdashboard">
+            <div class="tg-widgetprofile">
+                <figure class="tg-directpostimg">
+                    <a href="#"><img src="~/Content/assets/images/thumbnails/img-20.jpg" alt="image description"></a>
+                </figure>
+                <div class="tg-directposthead">
+                    <h3><a href="#">@Model.UserName</a></h3>
+                    <div class="tg-subjects">Số dư: 0đ</div>
+                    <div class="tg-subjects">Đang chờ rút: 0đ</div>
+                </div>
+                <a class="tg-btn tg-btn-lg" href="#">Rút Tiền</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 pull-right">
+        <table>
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Ngày mua</th>
+                    <th>Tổng tiền</th>
+                    <th>Cashback</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="text-center">Không có dữ liệu</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

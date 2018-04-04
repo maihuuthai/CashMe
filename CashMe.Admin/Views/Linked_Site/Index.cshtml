@@ -1,0 +1,112 @@
+﻿@using CashMe.Core.Data
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var lsGroupSite = ViewBag.lsGroupSite as IEnumerable<GroupSite>;
+}
+<div class="panel">
+    <div class="panel-header header-line text-center">
+        <h3><strong>QUẢN LÝ LINK AFFILIATE </strong></h3>
+    </div>
+    <div class="panel-body bg-white">
+        <div class="col-md-12">
+            <table id="tbLinked_Site" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><a href="#" role="button" onclick="javascript: getLinked_SiteById(0);" data-toggle="modal" data-target="#detail_modal" class="btn btn-primary btn-embossed btn-sm"><i class="fa fa-plus"></i> Thêm</a></th>
+                        <th>Goup</th>
+                        <th>Website</th>
+                        <th>Ngày cập nhật</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detail_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="frmLinked_Site">
+
+                <div class="modal-header bg-aero">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong><span class="title_modal">CHI TIẾT</span></strong></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="hidden" class="OldImage" maxlength="250" readonly="readonly">
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <p><strong>Image uploader</strong></p>
+                                <div class="fileinput-new thumbnail" style="width: 250px; height: 150px;">
+                                    <img data-src="" src="~/Content/user/images/logo_site/lazada.png" class="img-responsive ReviewLogo">
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 250px; max-height: 150px;"></div>
+                                <div>
+                                    <span class="btn btn-default btn-file">
+                                        <span class="fileinput-new">Select image...</span><span class="fileinput-exists">Change</span>
+                                        <input type="file" name="Logo" id="Logo" class="Logo" accept="image/*" maxlength="250">
+                                    </span>
+                                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Group</label>
+                                <select class="form-control" data-search="true" name="GroupSiteId">
+                                    @foreach (var item in lsGroupSite)
+                                    {
+                                        <option value="@item.Id">@item.GroupName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Website</label>
+                                <input type="text" class="form-control" name="SiteName" required>
+                                <input type="hidden" name="Id" value="0" />
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label class="control-label">Link Affiliate</label>
+                                <input type="text" class="form-control" name="LinkAffiliate" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p>
+                                    <strong>Trạng thái</strong>
+                                </p>
+                                <div class="input-group">
+                                    <div class="icheck-inline">
+                                        <label><input type="radio" name="Flag" value="0" data-radio="iradio_square-blue"> Ngưng hoạt động</label>
+                                        <label><input type="radio" name="Flag" value="1" data-radio="iradio_square-blue" checked> Hoạt động</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary btn-embossed">Lưu lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/admin/Scripts/Linked_SiteScript.js"></script>

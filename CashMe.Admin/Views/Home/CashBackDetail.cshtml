@@ -1,0 +1,48 @@
+﻿@using CashMe.Service.Models
+@using CashMe.Core.Data
+@{
+    ViewBag.Title = "CashBackDetail";
+}
+@{
+    var allCashback = ViewBag.allCashback as IEnumerable<CashbackModel>;
+    var allLinkSite = ViewBag.allLinkSite as IEnumerable<Linked_Site>;
+}
+<div class="tg-pageinnerbanner tg-haslayout tg-parallaximg" data-appear-top-offset="600" data-parallax="scroll" data-image-src="~/Content/assets/images/banner/img-02.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="tg-pageheadcontent">
+                    <div class="tg-pagetitle">
+                        <h1>CHI TIẾT CHIẾT KHẤU CÁC NGÀNH HÀNG ĐƯỢC CASHBACK</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h1></h1>
+
+<div class="col-md-6 col-md-offset-3" style="margin-top:30px">
+    <div id="tg-servicesfeecollapse" class="tg-servicesfeecollapse">
+        @foreach (var item in allLinkSite)
+        {
+            var lsCashBackfromSite = allCashback.Where(c => c.Linked_SiteId == item.Id);
+            if (lsCashBackfromSite != null)
+            {
+                <h3 class="fa fa-angle-down">@item.SiteName</h3>
+                <div class="tg-collapsecontent">
+                    <ul>
+                        @foreach (var i in lsCashBackfromSite)
+                        {
+                            <li>
+                                <span>@i.CategoriesName</span>
+                                <span>@i.Value %</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        }
+    </div>
+
+</div>

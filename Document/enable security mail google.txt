@@ -1,0 +1,2 @@
+enable SSL send mail server google
+https://myaccount.google.com/lesssecureapps

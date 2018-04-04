@@ -1,0 +1,229 @@
+﻿@using Microsoft.AspNet.Identity
+@using CashMe.Shared.Common
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="~/Content/assets/images/favicon.png" type="image/png">
+    <title>CashMe - Management</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/style.css" rel="stylesheet">
+    <link href="~/Content/assets/css/theme.css" rel="stylesheet">
+    <link href="~/Content/assets/css/ui.css" rel="stylesheet">
+    <link href="~/Content/assets/css/layout.css" rel="stylesheet">
+    <script src="~/Content/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <link href="~/Content/assets/plugins/font-awesome-animation/font-awesome-animation.min.css" rel="stylesheet">
+    <!-- BEGIN CALENDAR CSS -->
+    <link href="~/Content/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+     <link href="~/Content/assets/plugins/PNotify/pnotify.custom.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+    <!-- BEGIN PAGE SCRIPTS -->
+
+    
+    <!-- END CALENDAR CSS -->
+</head>
+<body class="fixed-topbar fixed-sidebar theme-sdtl color-default">
+    <section>
+        <!-- BEGIN SIDEBAR -->
+        <div class="sidebar">
+            <div class="logopanel">
+                <h1>
+                    <a href="dashboard.html"></a>
+                </h1>
+            </div>
+            <div class="sidebar-inner">
+                <div class="sidebar-top">
+                    <form action="search-result.html" method="post" class="searchform" id="search-results">
+                        <input type="text" class="form-control" name="keyword" placeholder="Search...">
+                    </form>
+                    <div class="userlogged clearfix">
+                        <i class="icon icons-faces-users-01"></i>
+                        <div class="user-details">
+                            <h4>@User.Identity.Name</h4>
+                            <div class="dropdown user-login">
+                                <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="300">
+                                    <i class="online"></i><span>Available</span><i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="busy"></i><span>Busy</span></a></li>
+                                    <li><a href="#"><i class="turquoise"></i><span>Invisible</span></a></li>
+                                    <li><a href="#"><i class="away"></i><span>Away</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-title">
+                    MENU
+                </div>
+                <ul class="nav nav-sidebar">
+                    <li class="nav-active active"><a href="dashboard.html"><i class="icon-home"></i><span>Trang chủ</span></a></li>
+                    @if (User.IsInRole(DefaultData.RoleAdmin))
+                    {
+                        <li><a href="/DisplayMenu/Index"><i class="icon-puzzle"></i><span>Quản lý Menu</span></a></li>
+                        <li><a href="/Account/Index"><i class="icon-puzzle"></i><span>Quản lý thành viên</span></a></li>
+                        <li><a href="/Role/Index"><i class="icon-puzzle"></i><span>Quản lý roles</span></a></li>
+                    }                        
+                    <li><a href="/Categories/Index"><i class="icon-puzzle"></i><span>Quản lý danh mục</span></a></li>
+                    <li><a href="/GroupSite/Index"><i class="icon-puzzle"></i><span>Quản lý Group Site</span></a></li>
+                    <li><a href="/Linked_Site/Index"><i class="icon-puzzle"></i><span>Quản lý Website</span></a></li>
+                    <li><a href="/CashBack/Index"><i class="icon-puzzle"></i><span>Quản lý Cash back</span></a></li>
+                    <li><a href="/Cashout/Index"><i class="icon-puzzle"></i><span>Quản lý Cashout</span></a></li>
+                    <li><a href="/Percent/Index"><i class="icon-puzzle"></i><span>Quản lý chiết khấu</span></a></li>
+                    <li><a href="/Voucher/Index"><i class="icon-puzzle"></i><span>Quản lý Voucher</span></a></li>
+                    @*<li class="nav-parent">
+                        <a href="#"><i class="icon-puzzle"></i><span>Builder</span> <span class="fa arrow"></span></a>
+                        <ul class="children collapse">
+                            <li><a target="_blank" href="../../admin-builder/index.html"> Admin</a></li>
+                            <li><a href="page-builder/index.html"> Page</a></li>
+                            <li><a href="ecommerce-pricing-table.html"> Pricing Table</a></li>
+                        </ul>
+                    </li>*@
+                </ul>
+            </div>
+        </div>
+        <!-- END SIDEBAR -->
+        <div class="main-content">
+            <!-- BEGIN TOPBAR -->
+            <div class="topbar">
+                <div class="header-left">
+                    <div class="topnav">
+                        <a class="menutoggle" href="#" data-toggle="sidebar-collapsed"><span class="menu__handle"><span>Menu</span></span></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="header-menu nav navbar-nav">
+                        <!-- BEGIN MESSAGES DROPDOWN -->
+                        @Html.Action("MessagePartial", "Menu")
+                        <!-- END MESSAGES DROPDOWN -->
+                        <!-- BEGIN USER DROPDOWN -->
+                        @*@Html.Partial("_LoginPartial")*@
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li class="dropdown" id="user-header">                            
+                                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username">                                
+                                        @{ var str = "Hello ";
+                                            str += User.Identity.GetUserName() + "!";
+                                        }
+                                        @str
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#"><i class="icon-user"></i><span>My Profile</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-calendar"></i><span>My Calendar</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-settings"></i><span>Account Settings</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("LogOff","Account")"><i class="icon-settings"></i><span>Log out</span></a>
+                                    </li>
+                                 </ul>
+                             </li>
+                        }
+                        @*else
+                        {
+                            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                        }*@
+
+                        @*<li id="quickview-toggle"><a href="#"><i class="icon-bubbles"></i></a></li>*@
+                        <!-- BEGIN QUICKVIEW SIDEBAR -->
+                        <!-- END QUICKVIEW SIDEBAR -->
+                    </ul>              
+                </div>
+                <!-- header-right -->
+            </div>
+            <!-- END TOPBAR -->
+            <!-- BEGIN PAGE CONTENT -->
+            <div class="page-content page-thin">
+                    @RenderBody()
+                @*@Html.Action("Footer", "Template")*@
+            </div>
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </section>
+    <!-- BEGIN SEARCH -->
+    <div id="morphsearch" class="morphsearch">
+        <form class="morphsearch-form">
+            <input class="morphsearch-input" type="search" placeholder="Search..." />
+            <button class="morphsearch-submit" type="submit">Search</button>
+        </form>
+        <!-- /morphsearch-content -->
+        <span class="morphsearch-close"></span>
+    </div>
+    <!-- END SEARCH -->
+    <!-- BEGIN PRELOADER -->
+    <div class="spinner-system" id="spinner-system" style="display:none">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <!-- END PRELOADER -->
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+    <script src="~/Content/assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="~/Content/assets/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
+    <script src="~/Content/assets/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+    <!-- BEGIN PAGE SCRIPTS -->
+    <script src="~/Content/assets/plugins/datatables/jquery.dataTables.min.js"></script> <!-- Tables Filtering, Sorting & Editing -->
+
+    <script src="~/Content/assets/plugins/gsap/main-gsap.min.js"></script>
+    <script src="~/Content/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/assets/plugins/bootstrap/js/jasny-bootstrap.min.js"></script><!-- SELECT IMAGE -->
+    <script src="~/Content/assets/plugins/jquery-cookies/jquery.cookies.min.js"></script> <!-- Jquery Cookies, for theme -->
+    <script src="~/Content/assets/plugins/jquery-block-ui/jquery.blockUI.min.js"></script> <!-- simulate synchronous behavior when using AJAX -->
+    <script src="~/Content/assets/plugins/bootbox/bootbox.min.js"></script> <!-- Modal with Validation -->
+
+    <script src="~/Content/assets/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> <!-- Custom Scrollbar sidebar -->
+    <script src="~/Content/assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script> <!-- Show Dropdown on Mouseover -->
+    <script src="~/Content/assets/plugins/select2/select2.min.js"></script> <!-- Select Inputs -->
+    <script src="~/Content/assets/plugins/icheck/icheck.min.js"></script> <!-- Checkbox & Radio Inputs -->
+    <script src="~/Content/assets/plugins/backstretch/backstretch.min.js"></script> <!-- Background Image -->
+    <script src="~/Content/assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script> <!-- Animated Progress Bar -->
+    <script src="~/Content/assets/js/builder.js"></script> <!-- Theme Builder -->
+    <script src="~/Content/assets/js/sidebar_hover.js"></script> <!-- Sidebar on Hover -->
+    <script src="~/Content/assets/js/application.js"></script> <!-- Main Application Script -->
+    <script src="~/Content/assets/js/plugins.js"></script> <!-- Main Plugin Initialization Script -->
+    <!-- BEGIN PAGE SCRIPTS -->
+    <script src="~/Content/assets/plugins/jquery-validation/jquery.validate.js"></script> <!-- Form Validation -->
+    <script src="~/Content/assets/plugins/jquery-validation/additional-methods.min.js"></script> <!-- Form Validation Additional Methods - OPTIONAL -->
+    <!-- BEGIN PAGE SCRIPT -->
+    <script src="~/Content/assets/plugins/PNotify/pnotify.custom.min.js"></script><!-- Notifications -->
+    <script src="~/Content/assets/plugins/summernote/summernote.min.js"></script> <!-- Simple HTML Editor -->
+    <script src="~/Content/assets/plugins/moment/moment.min.js"></script>
+    <script src="~/Content/assets/js/layout.js"></script>
+    <!-- BEGIN PAGE SCRIPTS CUSTOM-->
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Content/Scripts/CryptoJS.js"></script>
+    <script src="~/Content/Scripts/ToolFunction.js"></script>
+    <script src="~/Content/admin/Scripts/MessageScript.js"></script>
+
+        <!-- END PAGE SCRIPTS -->
+        <script>
+            @functions{
+                public string GetAntiForgeryToken()
+                {
+                    string cookieToken, formToken;
+                    AntiForgery.GetTokens(null, out cookieToken, out formToken);
+                    return cookieToken + "," + formToken;
+                }
+            }
+        </script>
+        <input type="hidden" id="forgeryToken" value="@GetAntiForgeryToken()" />
+        <script>
+            $(document).ready(function () {
+            });
+        </script>
+        <!-- BEGIN PAGE SCRIPTS CUSTOM-->
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

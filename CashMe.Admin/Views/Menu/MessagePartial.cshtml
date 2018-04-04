@@ -1,0 +1,73 @@
+﻿<style>
+
+</style>
+<li class="dropdown" id="messages-header">
+    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        <i class="icon-paper-plane"></i>
+        <span class="badge badge-danger badge-header CountMessageUnread">
+            0
+        </span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="dropdown-header clearfix">
+            <p class="pull-left">
+                Bạn có tổng cộng <span class="CountMessage"></span> thông báo
+            </p>
+        </li>
+        <li class="dropdown-body ContentMessage">
+            @*<ul class="dropdown-menu-list withScroll" data-height="220">
+                <li class="clearfix">
+                    <div class="clearfix">
+                        <div>
+                            <strong>Alexa Johnson</strong>
+                            <small class="pull-right text-muted">
+                                <span class="glyphicon glyphicon-time p-r-5"></span>12 mins ago
+                            </small>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                    </div>
+                </li>
+            </ul>*@
+        </li>
+        <li class="dropdown-footer clearfix">
+            <a href="@Url.Action("Index","Message")" class="pull-left">Xem tất cả</a>
+            <a href="#" class="pull-right">
+                <i class="icon-settings"></i>
+            </a>
+        </li>
+    </ul>
+</li>
+
+<div class="modal fade" id="detail_mesage_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="frmDetailMessage">
+                <div class="modal-header bg-aero">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong><span class="title_modal">CHI TIẾT THÔNG BÁO</span></strong></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Tiêu đề:</label>
+                                    <p class="Title">Tiêu đề ở đây</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Nội dung:</label>
+                                <div class="Body">
+                                    <p>Nội dung ở đây </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-embossed" data-dismiss="modal">Đóng</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

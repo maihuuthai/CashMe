@@ -1,0 +1,111 @@
+﻿@using Microsoft.AspNet.Identity
+@using CashMe.Shared.Common
+@model CashMe.Shared.Models.RegisterViewModel
+
+<header id="tg-header" class="tg-header tg-haslayout">
+    <div class="tg-topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <span class="tg-quickadvice">Hotline: <strong>@Model.PhoneNumber</strong></span>
+                        <ul class="tg-contactinfo">
+                            <li><a href="#">@Model.UserName</a></li>   
+                            <li><a href="@Url.Action("LogOff", "Account")">Log out</a></li>   
+                        </ul>
+                    }                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <a href="@Url.Action("Index","Home")"><h3><strong class="tg-logo"><span class="text-info">Cash</span>Me</strong></h3></a>
+                <div class="tg-navigationarea">
+                    <nav id="tg-nav" class="tg-nav">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigation" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="tg-navigation" class="tg-navigation collapse navbar-collapse">
+                            <ul>
+                                <!--<li class="tg-hasdropdown">
+                                    <a href="index.html#">Categories</a>
+                                    <ul class="tg-dropdownmenu">
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v1.html">Doctors</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v2.html">Hospitals</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v3.html">Spas</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v1.html">Pharmacies</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v2.html">Labs</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v3.html">Fitness</a></li>
+                                        <li><a href="http://exprostudio.com/html/medlink/searchresult-v1.html">Clinics</a></li>
+                                    </ul>
+                                </li>-->
+                                <li><a href="@Url.Action("Index","Home")">TRANG CHỦ</a></li>
+                                <li><a href="@Url.Action("MainCashBack","Home")"><span class="text-danger">CASH4ME</span></a></li>
+                                @*<li><a href="#">MÃ GIẢM GIÁ</a></li>*@
+                                <li><a href="@Url.Action("Guide","Home")">HƯỚNG DẪN SỬ DỤNG CASH4ME</a></li>
+                                <li><a href="@Url.Action("CashBackDetail","Home")">CHI TIẾT DANH MỤC HƯỞNG CHIẾT KHẤU</a></li>
+                                @if (!Request.IsAuthenticated)
+                                {
+                                    <li><a href="@Url.Action("Login", "Account")">ĐĂNG KÝ / ĐĂNG NHẬP</a></li>
+                                }
+                                else
+                                {
+                                    if (User.IsInRole(DefaultData.RoleAdmin))
+                                    {
+                                        <li><a href="@Url.Action("Index", "Categories")">QUẢN LÝ</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </nav>
+                    @*<div class="tg-admin">
+                        <a class="tg-btn" href="index.html#">Become A Member</a>
+                        <div class="tg-user">
+                            <div class="tg-dropdown">
+                                <figure class="tg-adminpic">
+                                    <span class="tg-dashboardbadge">3</span>
+                                    <a href="http://exprostudio.com/html/medlink/dashboard.html"><img src="~/Content/user/images/icons/icon-41.png" alt="image description"></a>
+                                </figure>
+                                <a href="javascript:void(0);" class="tg-usermenu tg-btndropdown">
+                                    <em>Chopper!</em>
+                                </a>
+                                <div class="dropdown-menu tg-dropdownbox tg-usermenu">
+                                    <ul>
+
+                                        <li>
+                                            <a href="http://exprostudio.com/html/medlink/dashboard-securitysettings.html">
+                                                <i class="fa fa-gears"></i>
+                                                <span>Security Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://exprostudio.com/html/medlink/dashboard-privacy-settings.html">
+                                                <i class="fa fa-eye"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html#">
+                                                <i class="fa fa-sign-out"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+

@@ -1,0 +1,58 @@
+﻿@using CashMe.Service.Models
+@{
+    ViewBag.Title = "Voucher";
+}
+@{ 
+    var lsVoucher = ViewBag.lsVoucher as IEnumerable<VoucherModel>;
+}
+<div class="tg-pageinnerbanner tg-haslayout tg-parallaximg" data-appear-top-offset="600" data-parallax="scroll" data-image-src="~/Content/assets/~/Content/assets/images/banner/img-02.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="tg-pageheadcontent">
+                    <div class="tg-pagetitle">
+                        <h1>DANH SÁCH VOUCHER</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-top:35px;margin-bottom:35px;">
+    <div class="col-md-8 col-md-offset-2">
+        <div id="tg-content" class="tg-content">
+            <div class="tg-searchresult">
+                @foreach (var item in lsVoucher)
+                {
+                    <div class="tg-directposts">
+                        <div class="tg-directpost">
+                            <figure class="tg-directpostimg">
+                                <a href="@item.LinkAffiliate" target="_blank"><img src="@item.Logo" alt="Image"></a>
+                            </figure>
+                            <div class="tg-directinfo">
+                                <div class="tg-leftarea">
+                                    <div class="tg-directposthead">
+                                        <h3><a href="#">@item.VoucherName</a></h3>
+                                        <div class="tg-subjects"><i class="fa fa-clock-o"></i> Hết hạn: @item.EndDate</div>
+                                    </div>
+                                    <ul class="tg-contactinfo">
+                                        <li><a href="#">&nbsp;</a></li>
+                                        <li><a href="#">&nbsp;</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tg-rightarea">
+                                    <div class="tg-bookappoinment">
+                                        <a href="@item.LinkAffiliate" target="_blank"><button type="button" class="tg-btn">Mua Ngay</button></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,131 @@
+﻿@using CashMe.Service.Models
+@using CashMe.Core.Data
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    var lsCashback = ViewBag.lsCashback as IEnumerable<CashbackModel>;
+    var lsGroupSite = ViewBag.lsGroupSite as IEnumerable<GroupSite>;
+
+}
+<section class="tg-main-section tg-haslayout tg-parallaximg" data-position-x="center" data-position-y="center" data-appear-top-offset="600" data-parallax="scroll" data-bleed="0" data-image-src="/Content/assets/images/parallax/bgparallax-04.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="tg-freeregistration text-center">
+                <div class="tg-regleftarea">
+                    <h2>Hoàn tiền chiết khấu khi mua hàng trực tuyến lên đến <span class="text-danger text-bold">10%</span></h2>
+                    <div class="tg-description"><p>Khi thực hiện mua hàng ở Lazada, Tiki, Sendo... thông qua website CashMe, bạn sẽ được giảm tối đa thêm <span class="text-danger">10% / hóa đơn.</span> Quá tuyệt đúng không nào?</p></div>
+                </div>
+                <a class="btn btn-info" href="javascript:void(0);" style="margin-top:15px">NHẬN CHIẾT KHẤU</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main id="tg-main" class="tg-main tg-haslayout">
+
+
+    <section class="tg-main-section tg-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="tg-newstrusted">
+                    <div class="tg-sectionhead">
+                        <div class="tg-sectiontitle">
+                            <h2>Danh sách website được nhận ưu đãi</h2>
+                            <img class="tg-svginject" src="~/Content/assets/images/sectionline.png" alt="image description">
+                            @*@Html.ActionLink("Test Identity", "TestApi", "Home")*@
+                            @*@{
+                                    var str = User.Identity.IsAuthenticated ? "Hello " + User.Identity.Name : "Please, login to system!";
+                                    <strong>@str</strong>
+                                }*@
+                        </div>
+                    </div>
+
+                    <div class="tg-latestnews">
+                        @foreach (var item in lsCashback)
+                        {
+                        <div class="col-sm-6 col-md-3">
+                            <a href="@item.LinkAffiliate" target="_blank">
+                                <article class="tg-post">
+                                    <div class="tg-postcontent">
+                                        <time class="tg-postdate">Max<span>@item.Value%</span></time>
+                                        <div>
+                                            <img src="@item.Logo" alt="chiết khấu khi mua hàng ở @item.SiteName" class="img-box-logo">
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        }
+
+                        @*@foreach (var i in lsGroupSite)
+                        {
+                            <div class="tg-percentage">
+                                <span></span>
+                                <span>@i.GroupName.ToUpper()</span>
+                            </div>
+                            foreach (var item in lsCashback)
+                            {
+                                if (i.Id == item.GroupSiteId)
+                                {
+                                    <div class="col-sm-6 col-md-3">
+                                        <a href="@item.LinkAffiliate" target="_blank">
+                                            <article class="tg-post">
+                                                <div class="tg-postcontent">
+                                                    <time class="tg-postdate">Max<span>@item.Value%</span></time>
+                                                    <div>
+                                                        <img src="@item.Logo" alt="chiết khấu khi mua hàng ở @item.SiteName" class="img-box-logo">
+                                                    </div>
+
+                                                </div>
+                                            </article>
+                                        </a>
+                                    </div>
+                                }
+                            }
+                        }*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<!--************************************
+        Statistics Start
+*************************************-->
+<section class="tg-main-section tg-haslayout tg-parallaximg tg-imgoverlap" data-bleed="-17" data-appear-top-offset="600" data-parallax="scroll" data-image-src="/Content/assets/images/parallax/bgparallax-02.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="tg-statisticscounters">
+                    <div class="row">
+                        <div class="tg-counter">
+                            <figure><img src="~/Content/assets/images/icons/icon-05.png" alt="image description"></figure>
+                            <h2><span data-from="0" data-to="8000" data-speed="8000" data-refresh-interval="50">8000+</span></h2>
+                            <h3>Lượt truy cập</h3>
+                        </div>
+                        <div class="tg-counter">
+                            <figure><img src="~/Content/assets/images/icons/icon-06.png" alt="image description"></figure>
+                            <h2><span data-from="0" data-to="154" data-speed="8000" data-refresh-interval="50">154+</span></h2>
+                            <h3>Thành viên</h3>
+                        </div>
+                        <div class="tg-counter">
+                            <figure><img src="~/Content/assets/images/icons/icon-07.png" alt="image description"></figure>
+                            <h2><span data-from="0" data-to="24" data-speed="8000" data-refresh-interval="50">24+</span></h2>
+                            <h3>Cash back</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 hidden-xs">
+                <figure class="tg-sectionimg"><img src="~/Content/assets/images/image_footer.png" alt="image description"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!--************************************
+        Statistics End
+*************************************-->
